@@ -58,7 +58,7 @@ class _NavigationState extends State<Navigation> {
               icon: Icon(Icons.home)
           ),
           BottomNavyBarItem(
-              title: Text('Library'),
+              title: Text('Resources'),
               icon: Icon(Icons.book)
           ),
           BottomNavyBarItem(

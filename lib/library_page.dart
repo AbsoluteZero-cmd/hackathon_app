@@ -43,7 +43,7 @@ class _LibraryPageState extends State<LibraryPage> {
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) {
                     return Container(
-                      margin: EdgeInsets.symmetric(vertical: 10),
+                      margin: EdgeInsets.only(bottom: 10),
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         color: Colors.grey[100],
