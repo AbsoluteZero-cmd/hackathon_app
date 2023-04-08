@@ -10,8 +10,115 @@ class LibraryPage extends StatefulWidget {
 class _LibraryPageState extends State<LibraryPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Library'),
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 42, horizontal: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Ресурсы',
+            style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.w800
+            ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Курсы',
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600
+                ),
+              ),
+              SizedBox(
+                width: width - 2 * 16,
+                height: (height - 2 * 42) * 0.35,
+                child: ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[100],
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                      ),
+                      
+                      width: width - 2 * 16,
+                      child: Row(
+                        children: [
+                          Icon(Icons.abc, color: Colors.blue, size: 36,),
+                          Text(
+                              'Английский язык',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.blue
+                            ),
+                          ),
+                          Spacer(),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text('Вступить'),
+                              style: ButtonStyle(
+                                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(18.0),
+                                        side: BorderSide(color: Colors.blue, width: 3),
+                                      )
+                                  )
+                              )
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              )
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Учебники',
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600
+                ),
+              ),
+              SizedBox(
+                width: width - 2 * 16,
+                height: (height - 2 * 42) * 0.4,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: Container(
+                        padding: EdgeInsets.all(4),
+                        width: (width - 2 * 16) / 2 - 30,
+                        height: (height - 2 * 42) * 0.4,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Image.asset('assets/book_example.jpg', fit: BoxFit.cover,),
+                            Text('Казахский Язык. 4 класс')
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

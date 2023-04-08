@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   Widget _progressItem(IconData icon, String text, String points){
-
     return Container(
       width: MediaQuery.of(context).size.width * 0.4,
       child: Row(
@@ -132,14 +131,98 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Популярные курсы:',
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 24
+              Padding(
+                padding: const EdgeInsets.only(bottom: 16.0, top: 10),
+                child: Text(
+                  'Популярные курсы:',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 24
+                  ),
                 ),
               ),
+              SizedBox(
+                height: height * 0.4,
+                width: width - 2 * 16,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 3,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Card(
+                      child: Container(
+                        height: height * 0.4,
+                        width: width - 2 * 20,
+
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    child: Icon(Icons.computer, size: 36, color: Colors.blue,),
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                      color: Colors.grey[100],
+                                    ),
+                                  ),
+                                  TextButton(
+                                      onPressed: () {},
+                                      child: Text('Начинающий'),
+                                      style: ButtonStyle(
+                                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                              RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(18.0),
+                                                side: BorderSide(color: Colors.blue, width: 3),
+                                              )
+                                          )
+                                      )
+                                  )
+                                ],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 16),
+                                child: Text(
+                                  'Информатика 8 класс\nPython',
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w600
+                                  ),
+                                ),
+                              ),
+                              Text('Курс посвящен базовым понятиям и элементам языка программирования Python (операторы, числовые и строковые переменные, списки, условия и циклы).'),
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.all(12),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.video_collection, color: Colors.blue,),
+                                        Text('Кол-во уроков: 30')
+                                      ],
+                                    ),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                      color: Colors.grey[100],
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ),
+                    );
+                  }
+                ),
+              )
             ],
           ),
         )
