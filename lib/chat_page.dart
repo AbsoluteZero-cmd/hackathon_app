@@ -24,10 +24,7 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => ChatItemPage()),
-          );
+
         },
         child: Icon(Icons.chat),
       ),
@@ -52,7 +49,10 @@ class _ChatPageState extends State<ChatPage> {
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: () {
-
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ChatItemPage()),
+                      );
                     },
                     child: Container(
                       margin: EdgeInsets.only(bottom: 16),
