@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 Align(
                   alignment: AlignmentDirectional.topStart,
                   child: Text(
-                    'Мой прогресс',
+                    'Менің үлгерімім',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.w800
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Курс Алгебры: Пропорции',
+                          'Алгебры курсы: Пропорциялар',
                           style: TextStyle(
                               fontSize: 16
                           ),
@@ -118,8 +118,8 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      _progressItem(Icons.check, 'Пройдено', '30'),
-                      _progressItem(Icons.timelapse, 'Потрачено', '42'),
+                      _progressItem(Icons.check, 'Өтілген', '30'),
+                      _progressItem(Icons.timelapse, 'Өткен', '42'),
                     ],
                   ),
                 ),
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 16.0, top: 10),
                 child: Text(
-                  'Популярные курсы:',
+                  'Танымал курстар:',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 24
@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   TextButton(
                                       onPressed: () {},
-                                      child: Text('Начинающий'),
+                                      child: Text('Бастаушы'),
                                       style: ButtonStyle(
                                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                               RoundedRectangleBorder(
@@ -197,7 +197,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               ),
-                              Text('Курс посвящен базовым понятиям и элементам языка программирования Python (операторы, числовые и строковые переменные, списки, условия и циклы).'),
+                              Text('Курс Python бағдарламалау тілінің негізгі ұғымдары мен элементтеріне (операторлар, сандық және жолдық айнымалылар, тізімдер, шарттар және циклдар) арналған.'),
                               Row(
                                 children: [
                                   Container(
@@ -205,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Row(
                                       children: [
                                         Icon(Icons.video_collection, color: Colors.blue,),
-                                        Text('Кол-во уроков: 30')
+                                        Text('Сабақ саны: 30')
                                       ],
                                     ),
                                     decoration: BoxDecoration(

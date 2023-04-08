@@ -54,19 +54,19 @@ class _NavigationState extends State<Navigation> {
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-              title: Text('Home'),
+              title: Text('Басты'),
               icon: Icon(Icons.home)
           ),
           BottomNavyBarItem(
-              title: Text('Resources'),
+              title: Text('Өнімдер'),
               icon: Icon(Icons.book)
           ),
           BottomNavyBarItem(
-              title: Text('Chat'),
+              title: Text('Чаттар'),
               icon: Icon(Icons.chat_bubble)
           ),
           BottomNavyBarItem(
-              title: Text('Settings'),
+              title: Text('Настройки'),
               icon: Icon(Icons.settings)
           ),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:hackathon_app/chat_item_page.dart';
 
 class ChatPage extends StatefulWidget {
@@ -24,7 +25,14 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-
+          Fluttertoast.showToast(
+            msg: "Жаңа чат құру",
+            toastLength: Toast.LENGTH_SHORT,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.black,
+            textColor: Colors.white,
+            fontSize: 16.0,
+          );
         },
         child: Icon(Icons.chat),
       ),
@@ -35,7 +43,7 @@ class _ChatPageState extends State<ChatPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Чаты',
+              'Чаттар',
               style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.w800
@@ -62,7 +70,7 @@ class _ChatPageState extends State<ChatPage> {
                         children: [
                           Icon(Icons.person, color: Colors.blue, size: 36),
                           Text(
-                            'Ментор по информатике',
+                            index == 1 ? 'Информатика менторы' : 'Математика менторы',
                             style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 color: Colors.blue

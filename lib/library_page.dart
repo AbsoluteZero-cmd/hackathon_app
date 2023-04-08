@@ -20,7 +20,7 @@ class _LibraryPageState extends State<LibraryPage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Ресурсы',
+            'Өнімдер',
             style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.w800
@@ -30,7 +30,7 @@ class _LibraryPageState extends State<LibraryPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Курсы',
+                'Курстар',
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w600
@@ -55,7 +55,7 @@ class _LibraryPageState extends State<LibraryPage> {
                         children: [
                           Icon(Icons.abc, color: Colors.blue, size: 36,),
                           Text(
-                              'Английский язык',
+                              'Ағылшын тілі',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               color: Colors.blue
@@ -64,7 +64,7 @@ class _LibraryPageState extends State<LibraryPage> {
                           Spacer(),
                           TextButton(
                               onPressed: () {},
-                              child: Text('Вступить'),
+                              child: Text('Тіркелу'),
                               style: ButtonStyle(
                                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
@@ -86,7 +86,7 @@ class _LibraryPageState extends State<LibraryPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Учебники',
+                'Оқулықтар',
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w600
@@ -107,7 +107,7 @@ class _LibraryPageState extends State<LibraryPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Image.asset('assets/book_example.jpg', fit: BoxFit.cover,),
-                            Text('Казахский Язык. 4 класс')
+                            Text('Қазақ тілі. 4 сынып')
                           ],
                         ),
                       ),
