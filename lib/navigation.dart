@@ -39,10 +39,10 @@ class _NavigationState extends State<Navigation> {
             setState(() => _currentIndex = index);
           },
           children: <Widget>[
-            Container(color: Colors.blueGrey,),
-            Container(color: Colors.red,),
-            Container(color: Colors.green,),
-            Container(color: Colors.blue,),
+            HomePage(),
+            LibraryPage(),
+            ChatPage(),
+            SettingsPage()
           ],
         ),
       ),
@@ -54,19 +54,19 @@ class _NavigationState extends State<Navigation> {
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-              title: Text('Item One'),
+              title: Text('Home'),
               icon: Icon(Icons.home)
           ),
           BottomNavyBarItem(
-              title: Text('Item Two'),
-              icon: Icon(Icons.apps)
+              title: Text('Library'),
+              icon: Icon(Icons.book)
           ),
           BottomNavyBarItem(
-              title: Text('Item Three'),
+              title: Text('Chat'),
               icon: Icon(Icons.chat_bubble)
           ),
           BottomNavyBarItem(
-              title: Text('Item Four'),
+              title: Text('Settings'),
               icon: Icon(Icons.settings)
           ),
         ],
